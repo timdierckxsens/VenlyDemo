@@ -13,16 +13,20 @@
     "js-sha256": "^0.11.0",
     "jsencrypt": "3.3.2",
     "popper.js": "^1.15.0",
-    "web3": "1.8.0"
+    "web3": "1.8.0",
+    "dotenv": "^16.0.3"
   },
   "scripts": {
-    "start": "http-server -p 4000 -a 127.0.0.1 -c-1",
-    "start-ext": "http-server -p 4000 -c-1"
+    "start": "node generate-env.js && http-server -p 4000 -a 127.0.0.1 -c-1",
+    "start-ext": "node generate-env.js && http-server -p 4000 -c-1",
+    "generate-env": "node generate-env.js",
+    "test": "jest"
   },
   "engines": {
     "node": ">=18"
   },
   "devDependencies": {
-    "http-server": "^14.1.1"
+    "http-server": "^14.1.1",
+    "jest": "^29.0.0"
   }
 }
