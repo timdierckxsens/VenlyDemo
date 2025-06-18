@@ -21,3 +21,6 @@ This demo shows how to integrate [Venly's Wallet SDK](https://docs.venly.io) in 
 ```html
 <script src="https://unpkg.com/@venly/sdk-wallets"></script>
 ```
+
+This project targets **Node.js 18**. Use `nvm` with the provided `.nvmrc` or any
+Node version `>=18` as defined in `package.json`.

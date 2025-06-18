@@ -19,6 +19,9 @@
     "start": "http-server -p 4000 -a 127.0.0.1 -c-1",
     "start-ext": "http-server -p 4000 -c-1"
   },
+  "engines": {
+    "node": ">=18"
+  },
   "devDependencies": {
     "http-server": "^14.1.1"
   }
