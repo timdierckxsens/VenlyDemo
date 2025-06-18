@@ -77,8 +77,9 @@
     };
 
     app.updateToken = (token) => {
-        $('input[name="bearer"]').val(app.auth.token);
-        $('#auth-token').val(token);
+        const t = token || '';
+        $('input[name="bearer"]').val(t);
+        $('#auth-token').val(t);
     };
 
 })();
