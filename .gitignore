@@ -718,3 +718,8 @@ $RECYCLE.BIN/
 # CUSTOM
 .env
 src/user.local.json
+# Standard exclusions
+node_modules/
+*.log
+.github/
+assets/docs/

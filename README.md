@@ -22,6 +22,7 @@ This demo shows how to integrate [Venly's Wallet SDK](https://docs.venly.io) in 
 <script src="https://unpkg.com/@venly/sdk-wallets"></script>
 ```
 
+
 ## 🚀 Getting Started
 
 1. Install dependencies:
@@ -54,3 +55,20 @@ Set the following variables with your Venly credentials when running the demo:
 - `ENVIRONMENT` – target Venly environment, e.g. `qa` or `prod`.
 
 These can be provided to Docker via `-e` flags or exported in your shell.
+
+## 🌱 Environment configuration
+
+Create a `.env` file in the project root before starting the demo. The file is used to generate a runtime configuration script that is loaded by the application.
+
+```
+cp .env.example .env
+```
+
+Edit `.env` and provide your Venly values:
+
+```
+ARKETYPE_CLIENT_SECRET=your-secret
+```
+
+Running `npm start` will automatically generate `assets/js/runtime-config.js` from your `.env` file.
+
