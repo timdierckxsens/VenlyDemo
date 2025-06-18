@@ -28,7 +28,7 @@
         env: app.env,
         connect: app.env + (app.useLocalConnect ? '-local' : '') + (app.useLocalKeycloak ? '-local' : ''),
         api: useLocalApi ? 'http://localhost:8581/api' : 'https://api-wallet' + resolvedEnv + '.venly.io/api',
-        arketypeClientSecret: '02053a9d-8293-43c4-a201-f8669f1329af', // Only visible for demo purpose, this secret should be configured in application backend
+        arketypeClientSecret: window._env_ && window._env_.ARKETYPE_CLIENT_SECRET ? window._env_.ARKETYPE_CLIENT_SECRET : '' // Only visible for demo purpose, this secret should be configured in application backend
     };
 
     function resolveEnv(appEnv) {
