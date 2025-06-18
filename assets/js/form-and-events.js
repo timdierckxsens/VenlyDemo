@@ -1337,7 +1337,7 @@
         htmlGroup.className = 'form-group row';
         var htmlLabel = document.createElement('label');
         htmlLabel.htmlFor = id;
-        htmlLabel.innerHTML = label;
+        htmlLabel.textContent = label;
         htmlLabel.className = 'col-sm-5 col-form-label';
         var htmlFieldCol = document.createElement('div');
         htmlFieldCol.className = 'col-sm-7';
@@ -1426,7 +1426,7 @@
         if (field.info) {
             var htmlInfo = document.createElement('small');
             htmlInfo.className = 'form-text text-muted';
-            htmlInfo.innerHTML = field.info;
+            htmlInfo.textContent = field.info;
             htmlFieldCol.appendChild(htmlInfo);
         }
 
@@ -1443,7 +1443,7 @@
         fieldSet.className = 'card-body';
         var htmlLegend = document.createElement('legend');
         htmlLegend.className = 'card-title';
-        htmlLegend.innerHTML = title;
+        htmlLegend.textContent = title;
         fieldSet.appendChild(htmlLegend);
 
         var keys = Object.keys(fields);

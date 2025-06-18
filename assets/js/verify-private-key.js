@@ -2,6 +2,12 @@ window.onload = function() {
     const btnVerify = document.getElementById("btnVerify");
     const inptPrivateKey = document.getElementById("private-key")
 
+    function sanitize(value) {
+        const div = document.createElement('div');
+        div.textContent = value;
+        return div.innerHTML;
+    }
+
     function getWalletAddress(pk) {
         try {
             return new ethers.Wallet(pk).address;
@@ -13,12 +19,12 @@ window.onload = function() {
 
     const verifyPrivateKey = function() {
         let privateKey = inptPrivateKey.value;
-        document.getElementById("zeroX").innerHTML = privateKey.startsWith('0x');
+        document.getElementById("zeroX").textContent = sanitize(privateKey.startsWith('0x'));
         if (privateKey.startsWith("0x")) privateKey = privateKey.slice(2);
-        document.getElementById("pkLength").innerHTML = privateKey.length;
-        document.getElementById("pkLength").innerHTML = privateKey.length;
-        document.getElementById("hexCheck").innerHTML = ethers.utils.isHexString(`0x${privateKey}`, 32);
-        document.getElementById("walletAddress").innerHTML = getWalletAddress(privateKey);
+        document.getElementById("pkLength").textContent = sanitize(privateKey.length);
+        document.getElementById("pkLength").textContent = sanitize(privateKey.length);
+        document.getElementById("hexCheck").textContent = sanitize(ethers.utils.isHexString(`0x${privateKey}`, 32));
+        document.getElementById("walletAddress").textContent = sanitize(getWalletAddress(privateKey));
     };
 
     btnVerify.addEventListener("click", verifyPrivateKey);
