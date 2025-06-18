@@ -83,7 +83,7 @@ async function fetchAccountData() {
   const accountContainer = document.querySelector("#accounts");
 
   // Purge UI elements any previously loaded accounts
-  accountContainer.innerHTML = '';
+  accountContainer.textContent = '';
 
   // Go through all accounts and get their ETH balance
   const rowResolvers = accounts.map(async (address) => {
