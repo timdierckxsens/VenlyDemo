@@ -21,3 +21,19 @@ This demo shows how to integrate [Venly's Wallet SDK](https://docs.venly.io) in 
 ```html
 <script src="https://unpkg.com/@venly/sdk-wallets"></script>
 ```
+
+## 🌱 Environment configuration
+
+Create a `.env` file in the project root before starting the demo. The file is used to generate a runtime configuration script that is loaded by the application.
+
+```
+cp .env.example .env
+```
+
+Edit `.env` and provide your Venly values:
+
+```
+ARKETYPE_CLIENT_SECRET=your-secret
+```
+
+Running `npm start` will automatically generate `assets/js/runtime-config.js` from your `.env` file.
